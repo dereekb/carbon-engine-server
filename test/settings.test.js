@@ -6,6 +6,7 @@ import { CjsDestinySettingsConfiguration as Configuration, CjsDestinyGlobalSetti
 import { is_dynamical_orientation_enabled, enable_dynamical_orientation,
     disable_dynamical_orientation, reset_settings_to_default, enable_new_orbit
 } from "@carbonenginejs/server/destiny/_util/settings";
+import { modelledOn } from "./donor-comments.js";
 
 // Source: destiny/python/destiny/test/test_configure.py:11-55
 // Source: destiny/src/Settings.cpp:13-65
@@ -181,8 +182,10 @@ test("settings metadata records native identities and Blue aliases without simul
 {
     assert.ok(CjsSchema.getField(Configuration, "collisionMaxIterations"));
     assert.ok(CjsSchema.getField(Configuration, "useNewOrbit"));
-    assert.equal(CjsSchema.getSchema(Configuration).modelledOn, "SettingsConfiguration");
-    assert.equal(CjsSchema.getSchema(GlobalSettings).modelledOn, "GlobalSettings");
+    assert.deepEqual(modelledOn("destiny/Settings/CjsDestinySettingsConfiguration.js", "CjsDestinySettingsConfiguration"),
+        ["SettingsConfiguration"]);
+    assert.deepEqual(modelledOn("destiny/Settings/CjsDestinyGlobalSettings.js", "CjsDestinyGlobalSettings"),
+        ["GlobalSettings"]);
     for (const field of ["collisionMaxIterations", "useIterativeCollision", "useDynamicalOrientation",
         "disableDynamicalOrientationForMissiles", "useNewOrbit"])
     {

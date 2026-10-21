@@ -11,8 +11,10 @@ import { is_dynamical_orientation_enabled } from "../../_util/settings.js";
  * Carbon's command history, immediate global/removal operations and weak signals.
  * Native method names and tuples are preserved; the server ticker owns queued
  * execution and transport. Native tasklet profiling remains a host dependency.
+ *
+ * Modelled on: Actions (destiny/python/destiny/net/server/_actions.py:14)
  */
-@meta.define({ className: "Actions", modelledOn: "destiny.net.server.Actions" })
+@meta.define({ className: "Actions" })
 export class Actions
 {
     _park = null;

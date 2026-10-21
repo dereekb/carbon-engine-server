@@ -33,8 +33,10 @@ const ORBITAL_PRECESSION = 0.001;
  * legacy/new orbit. Spatial membership and bubble activity are maintained;
  * legacy/iterative collision response and dynamic orientation are available;
  * proximity scanning and native state streams are available; server batching remains pending.
+ *
+ * Modelled on: Ballpark (destiny/src/Ballpark.h:72)
  */
-@meta.define({ className: "CjsBallparkController", modelledOn: "Ballpark" })
+@meta.define({ className: "CjsBallparkController" })
 @blue.inherit(IBlueEvents)
 export class CjsBallparkController
 {

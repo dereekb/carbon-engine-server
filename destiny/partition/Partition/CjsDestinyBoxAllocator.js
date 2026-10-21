@@ -2,8 +2,12 @@ import { meta } from "@carbonenginejs/runtime/schema";
 import { CjsDestinyBox } from "../CjsDestinyBox.js";
 
 // Source: destiny/src/Partition.h:50-64; destiny/src/Partition.cpp:520-554
-/** Carbon box allocation boundary with synchronous teardown and JavaScript memory ownership. */
-@meta.define({ className: "CjsDestinyBoxAllocator", modelledOn: "BoxAllocator" })
+/**
+ * Carbon box allocation boundary with synchronous teardown and JavaScript memory ownership.
+ *
+ * Modelled on: BoxAllocator (destiny/src/Partition.h:50)
+ */
+@meta.define({ className: "CjsDestinyBoxAllocator" })
 export class CjsDestinyBoxAllocator
 {
     /**

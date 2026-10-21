@@ -13,8 +13,12 @@ export const g_useDynamicalOrientationDefault = false;
 export const g_disableDynamicalOrientationForMissilesDefault = false;
 export const g_useNewOrbitDefault = false;
 
-/** Mutable, detached configuration of Carbon's five global Destiny settings. */
-@meta.define({ className: "CjsDestinySettingsConfiguration", modelledOn: "SettingsConfiguration" })
+/**
+ * Mutable, detached configuration of Carbon's five global Destiny settings.
+ *
+ * Modelled on: SettingsConfiguration (destiny/src/Settings.h:23)
+ */
+@meta.define({ className: "CjsDestinySettingsConfiguration" })
 export class CjsDestinySettingsConfiguration
 {
     m_collisionMaxIterations = g_collisionMaxIterationsDefault;

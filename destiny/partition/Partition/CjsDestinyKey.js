@@ -2,8 +2,12 @@ import { meta } from "@carbonenginejs/runtime/schema";
 import { CjsDestinyBall } from "../../CjsDestinyBall.js";
 
 // Source: destiny/src/Partition.h:66-102
-/** Carbon partition key with exact signed-int64 coordinates and native clamping. */
-@meta.define({ className: "CjsDestinyKey", modelledOn: "Key" })
+/**
+ * Carbon partition key with exact signed-int64 coordinates and native clamping.
+ *
+ * Modelled on: Key (destiny/src/Partition.h:66)
+ */
+@meta.define({ className: "CjsDestinyKey" })
 export class CjsDestinyKey
 {
     ix = 0n;

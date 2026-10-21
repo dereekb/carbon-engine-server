@@ -9,8 +9,10 @@ import { vec3d } from "./math/vec3d.js";
  * Adaptation: owned f64 views and JS accessors replace native value fields;
  * GC replaces IRoot locking. Native Python constructors remain outside this surface.
  * The parent ID stays undefined until assigned, matching native indeterminate storage.
+ *
+ * Modelled on: MiniCapsule (destiny/src/MiniCapsule.h:14)
  */
-@meta.define({ className: "CjsDestinyMiniCapsule", modelledOn: "MiniCapsule" })
+@meta.define({ className: "CjsDestinyMiniCapsule" })
 export class CjsDestinyMiniCapsule
 {
     mId = 0n;

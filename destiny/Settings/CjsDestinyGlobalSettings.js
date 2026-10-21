@@ -14,8 +14,12 @@ export let g_useDynamicalOrientation = g_useDynamicalOrientationDefault;
 export let g_disableDynamicalOrientationForMissiles = g_disableDynamicalOrientationForMissilesDefault;
 export let g_useNewOrbit = g_useNewOrbitDefault;
 
-/** Copies and resets the native Destiny globals shared by all ballparks. */
-@meta.define({ className: "CjsDestinyGlobalSettings", modelledOn: "GlobalSettings" })
+/**
+ * Copies and resets the native Destiny globals shared by all ballparks.
+ *
+ * Modelled on: GlobalSettings (destiny/src/Settings.h:35)
+ */
+@meta.define({ className: "CjsDestinyGlobalSettings" })
 export class CjsDestinyGlobalSettings
 {
     /**

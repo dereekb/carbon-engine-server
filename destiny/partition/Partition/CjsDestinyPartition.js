@@ -11,8 +11,12 @@ const collisionCase3 = new CjsDestinyNearbyCriteria(3);
 const keyHash = new CjsDestinyKeyHash();
 const { DSTBALL_MISSILE, DSTBALL_FIELD } = CjsDestinyBall.DSTBALLMODE;
 
-/** Carbon sparse multilevel spatial partition and native candidate enumeration. */
-@meta.define({ className: "CjsDestinyPartition", modelledOn: "Partition" })
+/**
+ * Carbon sparse multilevel spatial partition and native candidate enumeration.
+ *
+ * Modelled on: Partition (destiny/src/Partition.h:126)
+ */
+@meta.define({ className: "CjsDestinyPartition" })
 export class CjsDestinyPartition
 {
     static NearbyCriteria = CjsDestinyNearbyCriteria;

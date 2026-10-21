@@ -1,8 +1,12 @@
 import { meta } from "@carbonenginejs/runtime/schema";
 
 // Source: destiny/src/MapOfLongLongs.h
-/** Native signed-int64 map with replacement insertion and non-inserting zero reads. */
-@meta.define({ className: "MapOfLongLongs", modelledOn: "MapOfLongLongs" })
+/**
+ * Native signed-int64 map with replacement insertion and non-inserting zero reads.
+ *
+ * Modelled on: MapOfLongLongs (destiny/src/MapOfLongLongs.h:7)
+ */
+@meta.define({ className: "MapOfLongLongs" })
 export class MapOfLongLongs extends Map
 {
     /**

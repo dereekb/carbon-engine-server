@@ -3,8 +3,12 @@ import { vec3 } from "@carbonenginejs/runtime/math/vec3";
 import { vec3d } from "../math/vec3d.js";
 
 // Source: destiny/src/Plane.h; destiny/src/Plane.cpp
-/** Carbon plane with an unnormalized, double-precision normal and dot offset. */
-@meta.define({ className: "CjsDestinyPlaned", modelledOn: "Planed" })
+/**
+ * Carbon plane with an unnormalized, double-precision normal and dot offset.
+ *
+ * Modelled on: Planed (destiny/src/Plane.h:8)
+ */
+@meta.define({ className: "CjsDestinyPlaned" })
 export class CjsDestinyPlaned
 {
     d = 0;

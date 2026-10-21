@@ -30,8 +30,10 @@ const boxComparer = new CjsDestinyBoxSortComparer();
  * Adaptation: Ball and Partitionable's shadowed mPark/mHandled fields share
  * one logical JS slot; native object layout and duplicate base storage are not exposed.
  * This class does not register the complete destiny.Ball identity.
+ *
+ * Modelled on: Ball (destiny/src/Ball.h:79)
  */
-@meta.define({ className: "CjsDestinyBall", modelledOn: "Ball" })
+@meta.define({ className: "CjsDestinyBall" })
 export class CjsDestinyBall extends CjsDestinyPartitionable
 {
     mSensor = new ProximitySensor();

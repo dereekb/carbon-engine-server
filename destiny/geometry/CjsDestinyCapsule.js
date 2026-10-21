@@ -7,8 +7,12 @@ import { CollideTwoSpheres, Quadratic } from "./Collision.js";
 
 // Source: destiny/src/Capsule.h:12-33; destiny/src/Capsule.cpp:11-581
 // Source: destiny/src/Capsule_Blue.cpp:8-28
-/** Carbon static capsule queries, sampled memberships and both response paths. */
-@meta.define({ className: "CjsDestinyCapsule", modelledOn: "Capsule" })
+/**
+ * Carbon static capsule queries, sampled memberships and both response paths.
+ *
+ * Modelled on: Capsule (destiny/src/Capsule.h:11)
+ */
+@meta.define({ className: "CjsDestinyCapsule" })
 export class CjsDestinyCapsule extends CjsDestinyStaticCollidable
 {
     mHemisphereA = [0, 0, 0];

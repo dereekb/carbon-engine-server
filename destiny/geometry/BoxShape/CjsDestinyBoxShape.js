@@ -17,8 +17,12 @@ const CONNECTED_SIDES = [
 ];
 const sideMapping = [[SIDE_LEFT, SIDE_RIGHT], [SIDE_BOTTOM, SIDE_TOP], [SIDE_BACK, SIDE_FRONT]];
 
-/** Carbon box corners, faces, line intersections and swept-sphere collision queries. */
-@meta.define({ className: "CjsDestinyBoxShape", modelledOn: "BoxShape" })
+/**
+ * Carbon box corners, faces, line intersections and swept-sphere collision queries.
+ *
+ * Modelled on: BoxShape (destiny/src/BoxShape.h:45)
+ */
+@meta.define({ className: "CjsDestinyBoxShape" })
 export class CjsDestinyBoxShape
 {
     m_corners = Array.from({ length: BoxCorner.CORNER_COUNT }, () => [0, 0, 0]);

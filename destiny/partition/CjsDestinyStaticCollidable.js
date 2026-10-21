@@ -6,8 +6,12 @@ import { CjsDestinyBoxSortComparer } from "./SortedSets/CjsDestinyBoxSortCompare
 // Source: destiny/src/StaticCollidable.h; destiny/src/StaticCollidable.cpp
 const boxComparer = new CjsDestinyBoxSortComparer();
 
-/** Native static-shape membership and abstract collision obligations. */
-@meta.define({ className: "CjsDestinyStaticCollidable", modelledOn: "StaticCollidable" })
+/**
+ * Native static-shape membership and abstract collision obligations.
+ *
+ * Modelled on: StaticCollidable (destiny/src/StaticCollidable.h:10)
+ */
+@meta.define({ className: "CjsDestinyStaticCollidable" })
 export class CjsDestinyStaticCollidable extends CjsDestinyPartitionable
 {
     mParentBallId = 0n;

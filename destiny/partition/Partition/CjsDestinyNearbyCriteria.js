@@ -1,8 +1,12 @@
 import { meta } from "@carbonenginejs/runtime/schema";
 
 // Source: destiny/src/Partition.h:195-209
-/** Carbon Partition::NearbyCriteria flags and its two native preset cases. */
-@meta.define({ className: "CjsDestinyNearbyCriteria", modelledOn: "Partition::NearbyCriteria" })
+/**
+ * Carbon Partition::NearbyCriteria flags and its two native preset cases.
+ *
+ * Modelled on: Partition::NearbyCriteria (destiny/src/Partition.h:195)
+ */
+@meta.define({ className: "CjsDestinyNearbyCriteria" })
 export class CjsDestinyNearbyCriteria
 {
     _flags = 0;

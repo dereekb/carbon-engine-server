@@ -2,8 +2,12 @@ import { meta, type } from "@carbonenginejs/runtime/schema";
 import { MapOfLongLongs } from "./MapOfLongLongs.js";
 
 // Source: destiny/src/Ball.h:31-40
-/** Stores periodic sensor timing and contacts; Ball scans and Ballpark schedules checks. */
-@meta.define({ className: "ProximitySensor", modelledOn: "ProximitySensor" })
+/**
+ * Stores periodic sensor timing and contacts; Ball scans and Ballpark schedules checks.
+ *
+ * Modelled on: ProximitySensor (destiny/src/Ball.h:31)
+ */
+@meta.define({ className: "ProximitySensor" })
 export class ProximitySensor
 {
     @type.float32

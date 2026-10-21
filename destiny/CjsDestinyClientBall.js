@@ -12,8 +12,12 @@ const f32 = Math.fround;
 // Source: destiny/src/Ball.cpp:1469-1487,1927-1935,2000-2124
 // Source: destiny/src/Ball.cpp:1118-1191
 // Source: destiny/src/Ball_Blue.cpp:538-616
-/** Carbon ClientBall motion curves, legacy orientation and derived impact rotation. */
-@meta.define({ className: "CjsDestinyClientBall", modelledOn: "ClientBall" })
+/**
+ * Carbon ClientBall motion curves, legacy orientation and derived impact rotation.
+ *
+ * Modelled on: ClientBall (destiny/src/Ball.h:395)
+ */
+@meta.define({ className: "CjsDestinyClientBall" })
 export class CjsDestinyClientBall extends CjsDestinyBall
 {
     mLastYaw = 0;

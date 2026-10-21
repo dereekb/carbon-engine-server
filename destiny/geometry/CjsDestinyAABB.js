@@ -2,8 +2,12 @@ import { meta } from "@carbonenginejs/runtime/schema";
 import { vec3 } from "@carbonenginejs/runtime/math/vec3";
 
 // Source: destiny/src/AABB.h; destiny/src/AABB.cpp
-/** Carbon axis-aligned bounds, using Number arrays for native Vector3d values. */
-@meta.define({ className: "CjsDestinyAABB", modelledOn: "AABB" })
+/**
+ * Carbon axis-aligned bounds, using Number arrays for native Vector3d values.
+ *
+ * Modelled on: AABB (destiny/src/AABB.h:7)
+ */
+@meta.define({ className: "CjsDestinyAABB" })
 export class CjsDestinyAABB
 {
     mLowCorner = [0, 0, 0];

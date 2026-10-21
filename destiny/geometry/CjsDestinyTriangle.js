@@ -4,8 +4,12 @@ import { vec3d } from "../math/vec3d.js";
 import { CjsDestinyPlaned } from "./CjsDestinyPlaned.js";
 
 // Source: destiny/src/Triangle.h; destiny/src/Triangle.cpp
-/** Carbon triangle queries with float64 storage preserving Vector3d precision. */
-@meta.define({ className: "CjsDestinyTriangle", modelledOn: "Triangle" })
+/**
+ * Carbon triangle queries with float64 storage preserving Vector3d precision.
+ *
+ * Modelled on: Triangle (destiny/src/Triangle.h:8)
+ */
+@meta.define({ className: "CjsDestinyTriangle" })
 export class CjsDestinyTriangle
 {
     a = vec3d.create();

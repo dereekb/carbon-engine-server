@@ -8,8 +8,10 @@ import { vec3d } from "./math/vec3d.js";
  * Carbon MiniBall descriptor, separate from its materialized world collider.
  * Adaptation: owned f64 views and JS accessors replace native value fields;
  * GC replaces IRoot locking. Native Python constructors remain outside this surface.
+ *
+ * Modelled on: MiniBall (destiny/src/MiniBall.h:14)
  */
-@meta.define({ className: "CjsDestinyMiniBall", modelledOn: "MiniBall" })
+@meta.define({ className: "CjsDestinyMiniBall" })
 export class CjsDestinyMiniBall
 {
     mId = 0n;

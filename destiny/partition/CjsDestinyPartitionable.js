@@ -1,8 +1,12 @@
 import { meta, type } from "@carbonenginejs/runtime/schema";
 
 // Source: destiny/src/Partitionable.h; destiny/src/Partitionable.cpp
-/** Native shared spatial state and abstract membership obligations. */
-@meta.define({ className: "CjsDestinyPartitionable", modelledOn: "Partitionable" })
+/**
+ * Native shared spatial state and abstract membership obligations.
+ *
+ * Modelled on: Partitionable (destiny/src/Partitionable.h:14)
+ */
+@meta.define({ className: "CjsDestinyPartitionable" })
 export class CjsDestinyPartitionable
 {
     mId = 0n;

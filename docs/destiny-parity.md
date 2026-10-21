@@ -12,8 +12,9 @@ Reviewed the local `carbonengine/destiny` donor at
 The public source lives at <https://github.com/carbonengine/destiny>.
 
 The user-approved temporary server experiment owns `CjsDestinyBall` and
-`CjsBallparkController`. Their schema definitions use `modelledOn: "Ball"` and
-`modelledOn: "Ballpark"`, not claims of full native class parity. All methods remain
+`CjsBallparkController`. Their class JSDoc carries `Modelled on: Ball (destiny/src/Ball.h:79)`
+and `Modelled on: Ballpark (destiny/src/Ballpark.h:72)`, not claims of full native class
+parity. All methods remain
 on the corresponding donor's class. No existing runtime class is duplicated or moved.
 `DSTBALLMODE` is a static enum on the local Ball model; no cross-package enum owner
 has been introduced. Nothing was promoted from generated source or regenerated.

@@ -8,8 +8,12 @@ const boxComparer = new CjsDestinyBoxSortComparer();
 const ballComparer = new CjsDestinyBallSortComparer();
 const staticComparer = new CjsDestinyStaticCollidableSortComparer();
 
-/** Carbon partition cell with sorted occupants, parent ownership and bubble traversal. */
-@meta.define({ className: "CjsDestinyBox", modelledOn: "Box" })
+/**
+ * Carbon partition cell with sorted occupants, parent ownership and bubble traversal.
+ *
+ * Modelled on: Box (destiny/src/Box.h:12)
+ */
+@meta.define({ className: "CjsDestinyBox" })
 export class CjsDestinyBox
 {
     lo = [0, 0, 0];

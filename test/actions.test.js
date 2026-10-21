@@ -3,6 +3,7 @@ import test from "node:test";
 import { CjsSchema } from "@carbonenginejs/runtime/schema";
 import { CjsBallparkController } from "@carbonenginejs/server/destiny";
 import { Actions } from "@carbonenginejs/server/destiny/net/server";
+import { modelledOn } from "./donor-comments.js";
 
 const ID = 1000000000001n;
 const TARGET = 1000000000002n;
@@ -156,7 +157,7 @@ test("Actions declares provenance and owns independent signals", () =>
 {
     const actions = new Actions(new CjsBallparkController());
     assert.equal(CjsSchema.getClassName(Actions), "Actions");
-    assert.equal(CjsSchema.getSchema(Actions).modelledOn, "destiny.net.server.Actions");
+    assert.deepEqual(modelledOn("destiny/net/server/Actions.js", "Actions"), ["Actions"]);
     assert.equal(actions.on_add_to_system_history.__len__(), 0);
     assert.equal(actions.on_ball_made_global.__len__(), 0);
     assert.notEqual(actions.on_add_to_system_history, actions.on_ball_made_global);

@@ -4,8 +4,12 @@ import { CjsDestinyTriangle } from "../CjsDestinyTriangle.js";
 import { IntersectSphereTriangle } from "../Collision.js";
 
 // Source: destiny/src/BoxShape.h:31-43; destiny/src/BoxShape.cpp:8-32
-/** Carbon rectangle face with double-precision vertices and swept-sphere queries. */
-@meta.define({ className: "CjsDestinyRectangleShape", modelledOn: "RectangleShape" })
+/**
+ * Carbon rectangle face with double-precision vertices and swept-sphere queries.
+ *
+ * Modelled on: RectangleShape (destiny/src/BoxShape.h:31)
+ */
+@meta.define({ className: "CjsDestinyRectangleShape" })
 export class CjsDestinyRectangleShape
 {
     m_a = [0, 0, 0];

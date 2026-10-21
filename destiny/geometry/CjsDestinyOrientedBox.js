@@ -7,8 +7,12 @@ import { CjsDestinyAABB } from "./CjsDestinyAABB.js";
 
 // Source: destiny/src/OrientedBox.h:11-39; destiny/src/OrientedBox.cpp:6-322
 // Source: destiny/src/OrientedBox_Blue.cpp:11-29
-/** Carbon static oriented-box geometry, partition memberships and collision response. */
-@meta.define({ className: "CjsDestinyOrientedBox", modelledOn: "OrientedBox" })
+/**
+ * Carbon static oriented-box geometry, partition memberships and collision response.
+ *
+ * Modelled on: OrientedBox (destiny/src/OrientedBox.h:12)
+ */
+@meta.define({ className: "CjsDestinyOrientedBox" })
 export class CjsDestinyOrientedBox extends CjsDestinyStaticCollidable
 {
     m_boxShape = new CjsDestinyBoxShape();

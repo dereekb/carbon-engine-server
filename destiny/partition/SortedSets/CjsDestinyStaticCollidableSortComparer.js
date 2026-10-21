@@ -1,8 +1,12 @@
 import { meta } from "@carbonenginejs/runtime/schema";
 
 // Source: destiny/src/SortedSets.h:26-31; destiny/src/StaticCollidable.cpp:55-63
-/** Native static-shape ordering by parent identity and then local identity. */
-@meta.define({ className: "CjsDestinyStaticCollidableSortComparer", modelledOn: "StaticCollidableSortComparer" })
+/**
+ * Native static-shape ordering by parent identity and then local identity.
+ *
+ * Modelled on: StaticCollidableSortComparer (destiny/src/SortedSets.h:26)
+ */
+@meta.define({ className: "CjsDestinyStaticCollidableSortComparer" })
 export class CjsDestinyStaticCollidableSortComparer
 {
     /**
