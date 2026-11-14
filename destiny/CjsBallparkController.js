@@ -1,4 +1,4 @@
-import { blue } from "@carbonenginejs/runtime/schema";
+import { CjsSchema } from "@carbonenginejs/runtime/schema";
 import { IBlueEvents } from "@carbonenginejs/runtime/blue";
 import { CjsDestinyBall } from "./CjsDestinyBall.js";
 import { CjsDestinyClientBall } from "./CjsDestinyClientBall.js";
@@ -17,6 +17,9 @@ import { DSTCONSTANTS, DESTINYPACKETS, BALLFLAGS } from "./consts.js";
 
 import { g_useIterativeCollision, g_useDynamicalOrientation, g_useNewOrbit, g_collisionMaxIterations,
     g_disableDynamicalOrientationForMissiles } from "./Settings/CjsDestinyGlobalSettings.js";
+
+// Carbon's exposure decorators (CjsSchema.be: runtime d9bb59b2b and cd3da929d retired #schema's blue).
+const { be } = CjsSchema;
 
 const f32 = Math.fround;
 const Mode = CjsDestinyBall.DSTBALLMODE;
@@ -6414,8 +6417,8 @@ export class CjsBallparkController
     };
 }
 
-// CjsBlueOS.RegisterForTicks admits callbacks through the runtime exposure table (IBlueEvents), which has no non-schema registration API.
-blue.inherit(IBlueEvents)(CjsBallparkController);
+// BlueOS.RegisterForTicks admits callbacks through the runtime exposure table (IBlueEvents), which has no non-schema registration API.
+be.inherit(IBlueEvents)(CjsBallparkController);
 
 /**
  * Applies the native missile-only exception to dynamical orientation.

@@ -67,7 +67,7 @@ ClientBall interpolation and iterative collision response are implemented;
 ## Clock and host boundaries
 
 `new CjsBallparkController(blueOS = null, pyOS = null)` injects the native
-host boundaries. The existing runtime CjsBlueOS supplies tick registration and
+host boundaries. The existing runtime BlueOS supplies tick registration and
 manual PumpOS; its elapsed Number clocks are not full native absolute-time parity.
 No simulation method calls schema APIs. The IBlueEvents declaration is metadata.
 

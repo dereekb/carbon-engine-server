@@ -1,5 +1,8 @@
-import { blue } from "@carbonenginejs/runtime/schema";
+import { CjsSchema } from "@carbonenginejs/runtime/schema";
 import { vec3d } from "./math/vec3d.js";
+
+// Carbon's exposure decorators (CjsSchema.be: runtime d9bb59b2b and cd3da929d retired #schema's blue).
+const { be } = CjsSchema;
 
 // Source: destiny/src/MiniBox.h
 // Source: destiny/src/MiniBox.cpp
@@ -229,4 +232,4 @@ export class CjsDestinyMiniBox
 
 // Native self-interface admission for BlueList<MiniBox>; no simulation schema lookup.
 // BlueList admits items through the runtime exposure table, which has no non-schema registration API.
-blue.interface()(CjsDestinyMiniBox, { kind: "class" });
+be.interface()(CjsDestinyMiniBox, { kind: "class" });
